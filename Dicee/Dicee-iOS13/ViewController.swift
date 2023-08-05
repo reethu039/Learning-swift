@@ -17,13 +17,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         //WHO.WHAT = VALUE
+        
         diceImageView1.image = UIImage(imageLiteralResourceName: "DiceSix")
-        diceImageView1.alpha = 0.5 //alpha is the transparency
         diceImageView2.image = UIImage(imageLiteralResourceName: "DiceTwo")
+        
+        //alpha is the transparency
+        //diceImageView1.alpha = 0.5
     }
-
-
+    
+    //this code is triggered when an action is performed on the UI
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        print("Button got tapped.")
+        diceImageView1.image = UIImage(imageLiteralResourceName: "DiceFour")
+        diceImageView2.image = UIImage(imageLiteralResourceName: "DiceFour")
+    }
+    
 }
 
